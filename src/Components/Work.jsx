@@ -113,22 +113,23 @@ return (
         </div>
         </div>
     </section>
- <section className="blogs" id="blog">
-                <div className="container">
-                    <h2>Blogs</h2>
-                    <div className="blog-grid">
-                        {['About Unorganised force in India', 'For Capital Markets and Banking'].map((title, index) => (
-                            <div key={index} className="blog-card">
-                                <h3>{title}</h3>
-                                <p>Understand risk and enhance accuracy across the entire trade life cycle.</p>
-                                {/* Use Link for navigation */}
-                                <Link to="/first" className="read-more">Read More →</Link>
-                            </div>
-                        ))}
-                    </div>
+<section className="blogs" id="blog">
+    <div className="container">
+        <h2>Blogs</h2>
+        <div className="blog-grid">
+            {['About Unorganised force in India', 'For Capital Markets and Banking'].map((title, index) => (
+                <div key={index} className="blog-card">
+                    <h3>{title}</h3>
+                    <p>Understand risk and enhance accuracy across the entire trade life cycle.</p>
+                    {/* Use Link to navigate to the specific blog page */}
+                    <Link to={index === 0 ? "/first" : "/sec"} className="read-more">Read More →</Link>
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
 
+        
     <footer>
         <div className="footer-content">
         <div className="footer-section">

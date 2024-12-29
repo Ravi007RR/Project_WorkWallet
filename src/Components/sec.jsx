@@ -1,13 +1,13 @@
 import React from 'react';
 
-const FirstBlog = () => {
+const SecBlog = () => {
     return (
         <div className="blog-content">
-            <h1>About Unorganised Force in India</h1>
-            <p>In this post, we will discuss the unorganised workforce in India...</p>
+            <h1>For Capital Markets and Banking</h1>
+            <p>This blog will explore the latest trends in capital markets and banking...</p>
             <p>Detailed content about the topic goes here. You can add paragraphs, images, and more...</p>
         </div>
     );
 };
 
-export default FirstBlog;
+export default SecBlog;
