@@ -56,7 +56,7 @@
 .social-icons {
     display: flex;
     gap: 1rem;
-    padding-right: 40px;
+    /* padding-right: 40px; */
     font-size: 25px;
     transition: transform 0.3s ease;
 }
@@ -312,9 +312,10 @@ svg:not(:host).svg-inline--fa {
     .navbar {
         flex-direction: row;
         /* Keep items in one line */
-        justify-content: space-between;
+        justify-content: space-evenly;
         /* Space between items */
-        padding: 1rem 2rem;
+        padding: 1px;
+
     }
 
     /* Show nav links and social icons */
@@ -323,9 +324,9 @@ svg:not(:host).svg-inline--fa {
         display: flex;
         flex-direction: row;
         /* Keep items horizontally aligned */
-        gap: 15px;
+        gap: 9px;
         /* Adjusted gap */
-        font-size: 16px;
+        font-size: 13px;
         margin-top: 0;
         /* Remove margin */
     }
@@ -382,3 +383,7 @@ svg:not(:host).svg-inline--fa {
     width: 100%;
     height: auto;
 }
+
+
+
+

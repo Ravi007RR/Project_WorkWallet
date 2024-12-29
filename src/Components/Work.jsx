@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import './App.css'; 
-import logo from '../assests/Logo.png'
+import { Link } from 'react-router-dom'; // Import Link for navigation
+import './App.css'; // Add appropriate styles
+import logo from '../assests/Logo.png' // Adjust the logo path as necessary
 
-const App = () => {
-const [menuActive, setMenuActive] = useState(false);
+const Work = () => {
+    const [menuActive, setMenuActive] = useState(false);
 
-const toggleMenu = () => {
-    setMenuActive(!menuActive);
-};
+    const toggleMenu = () => {
+        setMenuActive(!menuActive);
+    };
 
-const handleSmoothScroll = (e, targetId) => {
-    e.preventDefault();
-    const target = document.getElementById(targetId);
-    if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
-      setMenuActive(false); // Close mobile menu if open
-    }
-};
+    const handleSmoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const target = document.getElementById(targetId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            setMenuActive(false);
+        }
+    };
 
 return (
     <div>
@@ -112,21 +113,21 @@ return (
         </div>
         </div>
     </section>
-
-    <section className="blogs" id="blog">
-        <div className="container">
-        <h2>Blogs</h2>
-        <div className="blog-grid">
-            {['About Unorganised force in India',  'For Capital Markets and Banking',].map((title, index) => (
-            <div key={index} className="blog-card">
-                <h3>{title}</h3>
-                <p>Understand risk and enhance accuracy across the entire trade life cycle.</p>
-                <a href="https://www.work-wallet.com/" className="read-more">Read More →</a>
-            </div>
-            ))}
-        </div>
-        </div>
-    </section>
+ <section className="blogs" id="blog">
+                <div className="container">
+                    <h2>Blogs</h2>
+                    <div className="blog-grid">
+                        {['About Unorganised force in India', 'For Capital Markets and Banking'].map((title, index) => (
+                            <div key={index} className="blog-card">
+                                <h3>{title}</h3>
+                                <p>Understand risk and enhance accuracy across the entire trade life cycle.</p>
+                                {/* Use Link for navigation */}
+                                <Link to="/first" className="read-more">Read More →</Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
     <footer>
         <div className="footer-content">
@@ -169,4 +170,4 @@ return (
 );
 };
 
-export default App;
+export default Work;
